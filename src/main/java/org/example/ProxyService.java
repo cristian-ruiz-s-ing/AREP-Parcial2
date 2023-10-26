@@ -16,7 +16,7 @@ public class ProxyService {
 
         get("/lucasseq/:valor", (req, res) -> {
             String val = req.params("valor");
-            String urlMathService = "http://localhost:4567/calcular/"+val;
+            String urlMathService = "http://ec2-35-173-184-45.compute-1.amazonaws.com:42000/calcular/"+val;
             System.out.println(urlMathService);
             URL url = new URL(urlMathService);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
