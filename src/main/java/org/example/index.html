@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Secuencia de Lucas</h1>
+    <p>Número:</p>
+    <input type="text" id="numero" name="name" placeholder="Ingrese el número"><br><br>
+    <button type="submit" onclick="loadSeq()">Submit</button>
+    <p id="resp"></p>
+<script>
+    function loadSeq() {
+        const valor = document.getElementById("numero").value;
+
+        fetch(`http://localhost:4569/lucasseq/${valor}`, {
+        method: 'GET'
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("resp").textContent = `${data}`;
+        })
+    }
+</script>
+
+</body>
+</html>
