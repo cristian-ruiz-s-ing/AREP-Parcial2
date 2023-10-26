@@ -4,4 +4,4 @@
 ## Servicio proxy
 ![img proxy en AWS](./img/proxy1.PNG)
 ## Instancias creadas en EC2
-![img instancias en AWS](./img/instancias%20EC2.PNG)
+![img instancias en AWS](./img/instanciasEC2.PNG)
